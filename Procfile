@@ -1,0 +1,1 @@
+web: gunicorn geniusroom_server_render.wsgi --log-file -
