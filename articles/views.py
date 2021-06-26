@@ -1,11 +1,7 @@
-from django import template
-from django.core import paginator
-from django.db.models import query, Q
-from django.forms import formsets
-from django.http import HttpResponse, Http404, request
+from django.db.models import Q
+from django.http import Http404
 from django.shortcuts import redirect, render
 from django.template import TemplateDoesNotExist
-from django.template.loader import get_template
 from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LogoutView
@@ -15,17 +11,16 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
 from django.core.signing import BadSignature
-from django.core.mail import send_mail
 from django.contrib.auth import logout
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.views.generic.base import TemplateView
 from django.http import FileResponse
 
-from .models import AdvUser, Rubric, SubRubric, Article, Comment
+from .models import AdvUser, SubRubric, Article, Comment
 from .forms import AIFormSet, ArticleForm, ChangeUserInfoForm, RegisterUserForm, SearchForm, UserCommentForm, GuestCommentForm
 from .utilities import signer
-from django.conf.global_settings import MEDIA_URL
+from geniusroom_server_render.settings import MEDIA_URL
 
 
 def index(request):

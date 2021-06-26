@@ -4,7 +4,7 @@ from django.core.mail import send_mail
 from datetime import datetime
 from os.path import splitext
 from decouple import config
-from django.conf.global_settings import ALLOWED_HOSTS, EMAIL_HOST_USER
+from geniusroom_server_render.settings import ALLOWED_HOSTS, EMAIL_HOST_USER
 
 
 signer = Signer()
