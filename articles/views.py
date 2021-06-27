@@ -72,7 +72,6 @@ class ChangeUserInfoView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
         return get_object_or_404(queryset, pk=self.user_id)
 
 
-# TODO: реализовать PasswordResetView (c. 305)
 class GRPasswordChangeView(SuccessMessageMixin, LoginRequiredMixin, PasswordChangeView):
     template_name = 'main/password_change.html'
     success_message = 'Пароль пользователя изменен'
