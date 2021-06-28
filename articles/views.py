@@ -272,6 +272,6 @@ def profile_article_delete(request, pk):
         return render(request, 'main/profile_article_delete.html', context)
 
 
-def detail_img(request, rubric_pk, pk, img):
-    path = MEDIA_URL + img
-    return FileResponse(open(path, 'rb'))
+# def detail_img(request, rubric_pk, pk, img):
+#     path = MEDIA_URL + img
+#     return FileResponse(open(path, 'rb'))

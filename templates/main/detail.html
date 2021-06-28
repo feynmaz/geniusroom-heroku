@@ -11,7 +11,7 @@
 <div class="container-fluid mt-3">
     <div class="row">
         {% if article.image %}
-            <div class="col-md-auto"><a href="{% url 'main:detail_img' rubric_pk=article.rubric.pk pk=article.pk img=article.image %}"><img src="{{ article.image.url }}" class="main-image" alt="image"></a></div>
+            <img src="{{ article.image.url }}" class="main-image" alt="image">
         {% endif %}
         <div class="col">
             <h2>{{ article.title }}</h2>
@@ -28,9 +28,7 @@
 <div class="d-flex justify-content-between flex-wrap mt-5">
     {% for ai in ais %}
     <div>
-    <a href="{% url 'main:detail_img' rubric_pk=article.rubric.pk pk=article.pk img=ai.image %}">
         <img class=" additional-image" src="{{ ai.image.url }}" alt="">
-    </a>
         <p>{{ ai.caption }}</p>
     </div>
     {% endfor %}

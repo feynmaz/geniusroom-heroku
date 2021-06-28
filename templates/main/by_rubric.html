@@ -23,12 +23,12 @@
 </div>
 
 
-{% if page %}
+{% if articles %}
 <ul class="list-unstyled">
     {% for article in page %}
     <li class="media my-5 p-3 border">
         {% url 'main:detail' rubric_pk=rubric.pk pk=article.pk as the_url %}
-        <a href="{{the_url}} {{ all }}">
+        <a href="{{ the_url }}{{ all }}">
             {% if article.image %}
             <img class="mr-3" src="{% thumbnail article.image 'default' %}">
             {% else %}
@@ -36,7 +36,7 @@
             {% endif %}
         </a>
         <div class="media-body">
-            <h3><a href="{{ the_url }} {{ all }}">
+            <h3><a href="{{ the_url }}{{ all }}">
                     {{article.title}}
                 </a></h3>
             <div>{{article.content|linebreaks|truncatechars:300}}</div>
