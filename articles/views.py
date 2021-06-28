@@ -17,8 +17,8 @@ from django.core.paginator import Paginator
 from django.views.generic.base import TemplateView
 from django.http import FileResponse
 
-from .models import AdvUser, SubRubric, Article, Comment
-from .forms import AIFormSet, ArticleForm, ChangeUserInfoForm, RegisterUserForm, SearchForm, UserCommentForm, GuestCommentForm
+from .models import *
+from .forms import *
 from .utilities import signer
 from geniusroom_server_render.settings import MEDIA_URL
 
