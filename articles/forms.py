@@ -1,13 +1,11 @@
-from django.core import validators
 from django import forms
 from django.core.exceptions import ValidationError
-from django.forms import fields, models
 from django.contrib.auth import password_validation
 from django.forms import inlineformset_factory
 from captcha.fields import CaptchaField
 
 from .apps import user_registered
-from .models import AdvUser, Article, SuperRubric, SubRubric, AdditionalImage, Comment
+from .models import *
 
 
 class ChangeUserInfoForm(forms.ModelForm):

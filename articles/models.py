@@ -1,12 +1,10 @@
-from enum import unique
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from django.db.models.constraints import Deferrable
-from django.db.models.fields import TextField
 from django.db.models.fields.related import ForeignKey
-from .utilities import get_timestamp_path, send_new_comment_notification
 from django.db.models.signals import post_save
 from django.core import validators
+
+from .utilities import get_timestamp_path, send_new_comment_notification
 
 
 class AdvUser(AbstractUser):

@@ -3,7 +3,7 @@ from django.db.models import query
 
 from .models import AdvUser, SubRubric, SuperRubric
 from .models import Article, AdditionalImage, Comment
-from .utilities import send_activation_notification, send_new_comment_notification
+from .utilities import send_activation_notification
 from .forms import SubRubricForm
 
 import datetime

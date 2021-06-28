@@ -3,7 +3,7 @@ from django.core.signing import Signer
 from django.core.mail import send_mail
 from datetime import datetime
 from os.path import splitext
-from decouple import config
+
 from geniusroom_server_render.settings import ALLOWED_HOSTS, EMAIL_HOST_USER
 
 

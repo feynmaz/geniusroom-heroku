@@ -1,10 +1,7 @@
 from django.urls import path, include
-from .views import DeleteUserView, index, other_page, profile
-from .views import GRLoginView, GRLogoutView
-from .views import ChangeUserInfoView, GRPasswordChangeView
-from .views import RegisterUserView, RegisterDoneView
-from .views import user_activate, by_rubric, detail
-from .views import profile_article_detail, profile_article_add, profile_article_delete, profile_article_change, detail_img
+
+from .views import *
+
 
 app_name = 'main'
 
