@@ -23,9 +23,9 @@
 </div>
 
 
-{% if articles %}
+{% if page %}
 <ul class="list-unstyled">
-    {% for article in articles %}
+    {% for article in page %}
     <li class="media my-5 p-3 border">
         {% url 'main:detail' rubric_pk=rubric.pk pk=article.pk as the_url %}
         <a href="{{the_url}} {{ all }}">
